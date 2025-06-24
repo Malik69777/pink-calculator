@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #ffffff; /* White background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+#calculator {
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  background-color: #111; /* Black calculator */
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+}
+
+#display {
+  color: white;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+#previous {
+  font-size: 1.2rem;
+  color: #aaa;
+  min-height: 1.2rem;
+}
+
+#current {
+  font-size: 3rem;
+  min-height: 3.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: white;
+  background-color: #f48fb1; /* Pink */
+}
+
+button:hover {
+  background-color: #f06292;
+}
+
+/* SVG inside button */
+button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+/* Zero button spans 2 columns */
+.zero {
+  grid-column: span 2;
+  border-radius: 50px;
+  aspect-ratio: unset;
+  text-align: left;
+  padding-left: 30px;
+}

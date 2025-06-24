@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pink iOS Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="calculator">
+    <div id="display">
+      <div id="previous">0</div>
+      <div id="current">0</div>
+    </div>
+    <div id="keys">
+      <!-- Row 1 -->
+      <button class="function" onclick="clearDisplay()">AC</button>
+      <button class="function" onclick="deleteLast()" aria-label="Backspace">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 6H9L4 12l5 6h11a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2z"/>
+          <line x1="12" y1="10" x2="17" y2="15"/>
+          <line x1="17" y1="10" x2="12" y2="15"/>
+        </svg>
+      </button>
+      <button class="function" onclick="appendValue('%')">%</button>
+      <button class="operator" onclick="appendValue('/')">÷</button>
+
+      <!-- Row 2 -->
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button class="operator" onclick="appendValue('*')">×</button>
+
+      <!-- Row 3 -->
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button class="operator" onclick="appendValue('-')">−</button>
+
+      <!-- Row 4 -->
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button class="operator" onclick="appendValue('+')">+</button>
+
+      <!-- Row 5 -->
+      <button class="zero" onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button class="operator" onclick="calculateResult()">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
